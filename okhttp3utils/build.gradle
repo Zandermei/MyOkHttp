@@ -33,19 +33,19 @@ dependencies {
     implementation files('libs/okio-1.4.0.jar')
 
 }
-
-apply plugin: 'maven'
-uploadArchives {
-    repositories.mavenDeployer {
-        def mavenDirPath = file('/Users/edz/demo') // 本地存放目录(自行选择)，可放在gradle.properties文件中引用
-        repository(url: "file://${mavenDirPath.absolutePath}") // 必须双引号，单引号不会转义$
-        pom.project {
-            groupId "zd.cn.myokhttp" // 可以随意取，一般取包名
-            artifactId "okhttp3Utils" // 可以随意取，一般取库的名字
-            version "1.0.0" // 版本号
-        }
-    }
-}
+//
+//apply plugin: 'maven'
+//uploadArchives {
+//    repositories.mavenDeployer {
+//        def mavenDirPath = file('/Users/edz/demo') // 本地存放目录(自行选择)，可放在gradle.properties文件中引用
+//        repository(url: "file://${mavenDirPath.absolutePath}") // 必须双引号，单引号不会转义$
+//        pom.project {
+//            groupId "zd.cn.myokhttp" // 可以随意取，一般取包名
+//            artifactId "okhttp3Utils" // 可以随意取，一般取库的名字
+//            version "1.0.0" // 版本号
+//        }
+//    }
+//}
 
 //echo "# Okhttp3Utils" >> README.md
 //git init
@@ -53,3 +53,10 @@ uploadArchives {
 //git commit -m "first commit"
 //git remote add origin https://github.com/Zandermei/Okhttp3Utils.git
 //git push -u origin master
+//https://raw.githubusercontent.com/Zandermei/OkHttp3Utils
+//github 的地址信息
+//https://github.com/harusty/jnisay/
+//进行修改:
+//https://raw.githubusercontent.com/harusty/jnisay/master
+//即 github.com ——> raw.githubusercontent.com
+//在末尾追加 master 分支

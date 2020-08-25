@@ -14,14 +14,15 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
 
 import okhttp3.Call;
-import z.d.okhttp3utils.OkHttp3Utils;
-import z.d.okhttp3utils.ResultListener;
+
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -54,31 +55,26 @@ public class MainActivity extends AppCompatActivity {
                 map.put("count", "2");
                 map.put("type", "video");
 
-                OkHttp3Utils.downLoadPic("https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1598270559250&di=77f0c8a16cc615d304266749451fab28&imgtype=0&src=http%3A%2F%2Ffiles.eduuu.com%2Fimg%2F2012%2F05%2F22%2F170109_4fbb55d532871.jpg", new ResultListener() {
-                    @Override
-                    public void onSucess(Call call, String object) {
-                        Toast.makeText(getApplicationContext(), "成功", Toast.LENGTH_SHORT).show();
-                    }
-
-                    @Override
-                    public void onFilure(Call call) {
-                        Toast.makeText(getApplicationContext(), "失败", Toast.LENGTH_SHORT).show();
-                    }
-                });
-
-//               OkHttp3Utils.sendPostRequest("https://api.apiopen.top/getJoke", map, new ResultListener() {
+                Map<String, String> map = new HashMap<>();
+                map.put("key","value");
+                //通过 Map 集合添加数据
+//               OkHttp3Utils.sendPostRequest("url", map, new ResultListener() {
 //                   @Override
 //                   public void onSucess(Call call, String object) {
-//                       Log.e("----成功--",object);
+//                       //返回成功--处理数据
 //                       Toast.makeText(getApplicationContext(),"成功",Toast.LENGTH_SHORT).show();
 //                   }
 //
 //                   @Override
 //                   public void onFilure(Call call) {
-//                       Log.e("-----失败-","------");
+//                       //返回失败
 //                       Toast.makeText(getApplicationContext(),"失败",Toast.LENGTH_SHORT).show();
 //                   }
 //               });
+
+
+
+
 
             }
         });
